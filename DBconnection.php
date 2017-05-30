@@ -17,7 +17,8 @@
 	*/
 	
 	
-
+					// checks after special charachters
+			// so that people have harder time for sql injections
 	$first_name	= $conn->real_escape_string($_REQUEST['first_name']); 
 	$last_name = $conn->real_escape_string($_REQUEST['last_name']);
 	$course_name = $conn->real_escape_string($_REQUEST['course_name']);
