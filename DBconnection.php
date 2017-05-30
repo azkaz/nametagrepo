@@ -11,10 +11,6 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error); 
 	}
-
-	/*
-	$sql = "INSERT INTO visitation (first_name, last_name, course_name, start_date, end_date) VALUES ('Mölle', 'Nöff', 'In the grim future there is only WAAAAR!!!', '2017-05-29','2017-05-30')";
-	*/
 	
 	
 					// checks after special charachters
