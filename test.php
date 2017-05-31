@@ -13,6 +13,6 @@
 	End Date: <input type="date" name="end_date" placeholder="yyyy-mm-dd"><br>
 	<input type="submit" name="Submit">
 </form>
-<input type="button" name="print" value="print nametags">
+<input type="button" name="print" value="print nametags" onclick="">
 </body>
 </html>
