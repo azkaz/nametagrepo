@@ -12,7 +12,7 @@
 	}
 
 
-
+        $picture_tag = '';
         $name_tag = '';
         $sql = "SELECT visitor_id, first_name, last_name, course_name, start_date, end_date, visitor_picture FROM visitation";
         $result = $conn->query($sql);
@@ -32,6 +32,7 @@
              $name_tag .= '<p>'. $row["start_date"] .'</p>';
              $name_tag .= '<p>'. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
+             $picture_tag .= '<img src="data:image/jpeg;base64,'.base64_encode( $row['Lexicon'] ).'"/>';
 
          }
 
@@ -55,7 +56,10 @@ p{
         <div>
             <?php
                 echo $name_tag;
+                echo $picture_tag;
             ?>
         </div>
+        <img src="getImage.php?id=1" width="175" height="200" />
+        <img src="http://www.itmassa.se/wp-content/uploads/2016/09/Lexicon_IT-Konsult_RGB-BIGWhiteB.jpg"/>
 </body>
 </html>
