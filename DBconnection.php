@@ -21,7 +21,8 @@
 	$start_date = $conn->real_escape_string($_REQUEST['start_date']);
 	$end_date = $conn->real_escape_string($_REQUEST['end_date']);
 
-	$sql = "INSERT INTO visitation (visitor_id ,first_name, last_name, course_name, start_date, end_date) VALUES (default,'$first_name','$last_name','$course_name','$start_date','$end_date')";
+	$sql = "INSERT INTO visitation (visitor_id ,first_name, last_name, course_name, start_date, end_date) 
+	VALUES (default,'$first_name','$last_name','$course_name','$start_date','$end_date')";
 
 	if($conn->query($sql)===TRUE){
 		header("LOCATION: http://localhost/test.php");
