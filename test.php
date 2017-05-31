@@ -13,6 +13,11 @@
 	End Date: <input type="date" name="end_date" placeholder="yyyy-mm-dd"><br>
 	<input type="submit" name="Submit">
 </form>
-<input type="button" name="print" value="print nametags">
+
+<form action="printnametag.php">
+    <input type="submit" name="print" value="Print nametags" />
+</form>
+
+
 </body>
 </html>
