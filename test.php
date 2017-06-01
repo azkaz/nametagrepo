@@ -16,9 +16,9 @@
 	Course: <input type="text" name="course_name"><br>
 	Start Date: <input type="date" name="start_date" placeholder="yyyy-mm-dd"><br>
 	End Date: <input type="date" name="end_date" placeholder="yyyy-mm-dd"><br>
-	Complany Logo: <input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" disabled>
+	Company Logo: <input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" >
 	<div style="width:150px;height:150px">
-	<image src="Angry_Marine.jpg" style="max-width:100%;max-height:100%"></image>
+	<image id="logotype" src="visitor_pictures/Angry_Marine.jpg" style="max-width:100%;max-height:100%"></image>
 	</div>
 	<input type="submit" name="Submit">
 </form>
@@ -27,11 +27,11 @@
   <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Logo
     <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
+    <ul id="ddmID" class="dropdown-menu">
+      <li><a href="#">Angry_Marine</a></li>
+      <li><a href="#">Waagh</a></li>
+      <li><a href="#">wereBusy</a></li>
+      <li><a href="#">Tau</a></li>
     </ul>
   </div>
 </div>
@@ -43,8 +43,9 @@
     <input type="submit" name="print" value="Print nametags" />
 </form>
 <script>
-	$('dropdown-menu').on('mouseover', function(){
-		$('companyText').val(this).text();
+	$('#ddmID li').on('click', function(){
+		$('#companyText').val($(this).text());
+		$('#logotype').attr('src','visitor_pictures/'+$('#companyText').val()+'.jpg');
 	});
 </script>
 </body>
