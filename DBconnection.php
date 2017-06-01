@@ -20,7 +20,11 @@
 	$course_name = $conn->real_escape_string($_REQUEST['course_name']);
 	$start_date = $conn->real_escape_string($_REQUEST['start_date']);
 	$end_date = $conn->real_escape_string($_REQUEST['end_date']);
-
+	//$visitor_picture->real_escape_string($_REQUEST['visitor_picture']);
+	if($visitor_picture === null || $visitor_picture =="")
+	{
+		$visitor_picture = "/home/philip/Pictures/Angry_Marine.jpg";
+	}
 	$sql = "INSERT INTO visitation (visitor_id ,first_name, last_name, course_name, start_date, end_date) 
 	VALUES (default,'$first_name','$last_name','$course_name','$start_date','$end_date')";
 
