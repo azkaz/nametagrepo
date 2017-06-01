@@ -16,7 +16,7 @@
 	Course: <input type="text" name="course_name"><br>
 	Start Date: <input type="date" name="start_date" placeholder="yyyy-mm-dd"><br>
 	End Date: <input type="date" name="end_date" placeholder="yyyy-mm-dd"><br>
-	Complany Logo: <input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" disabled>
+	Complany Logo: <input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" >
 	<div style="width:150px;height:150px">
 	<image src="Angry_Marine.jpg" style="max-width:100%;max-height:100%"></image>
 	</div>
@@ -43,7 +43,7 @@
     <input type="submit" name="print" value="Print nametags" />
 </form>
 <script>
-	$('dropdown-menu').on('mouseover', function(){
+	$('dropdown-menu li').on('mouseover', function(){
 		$('companyText').val(this).text();
 	});
 </script>
