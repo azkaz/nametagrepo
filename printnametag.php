@@ -25,15 +25,22 @@
              // starting building a long string that is concatignated by using .= 
              // then echo out that string in html code below
              $name_tag .= '<br>';
-             $name_tag .= '<div>';
+             $name_tag .= '<div id="Carddiv">';
+             $name_tag .= '<div id="Textdiv">';
              $name_tag .= '<p>'. $row["first_name"] .'</p>';
              $name_tag .= '<p>'. $row["last_name"] .'</p>';
              $name_tag .= '<p><b>'. $row["course_name"] .'</b></p>'; 
              $name_tag .= '<p>'. $row["start_date"] .'</p>';
              $name_tag .= '<p>'. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
-             $picture_tag .= '<img src="data:image/jpeg;base64,'.base64_encode( $row['Lexicon'] ).'"/>';
-
+             $name_tag .= '<div id="Picturediv">';
+             $name_tag .= '<img id="Visitor_picture" src="http://www.itmassa.se/wp-content/uploads/2016/09/Lexicon_IT-Konsult_RGB-BIGWhiteB.jpg"/>';
+             $name_tag .= '</div>';
+             $name_tag .= '<div id="Bottomdiv">';
+             $name_tag .= '<h2>BESÖKARE</h2>';
+             $name_tag .= '</div>';
+             $name_tag .= '</div>';
+             //$picture_tag .= '<img src="data:image/jpeg;base64,'.base64_encode( $row['Lexicon'] ).'"/>';
          }
 
     } 
@@ -45,21 +52,17 @@
 
 <!DOCTYPE html>
 <html>
-<title>TEST</title>
-<style>
-p{
-    font-size: 10px;
-}
-</style>
+<title>Skriv ut tidigare besökare</title>
+    <head>
+        <link rel="stylesheet" href="csssheet.css">
+    </head>
 <body>
-    <h1>Funkar det ?<h1>
+    <h1>Alla tidigare besökare, sorterat äldst överst<h1>
         <div>
             <?php
                 echo $name_tag;
                 echo $picture_tag;
             ?>
         </div>
-        <img src="getImage.php?id=1" width="175" height="200" />
-        <img src="http://www.itmassa.se/wp-content/uploads/2016/09/Lexicon_IT-Konsult_RGB-BIGWhiteB.jpg"/>
 </body>
 </html>
