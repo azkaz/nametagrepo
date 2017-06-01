@@ -14,7 +14,7 @@
 
         $picture_tag = '';
         $name_tag = '';
-        $sql = "SELECT visitor_id, first_name, last_name, course_name, start_date, end_date, visitor_picture FROM visitation ORDER BY visitor_id DESC";
+        $sql = "SELECT visitor_id, first_name, last_name, course_name, start_date, end_date, visitor_picture FROM visitation ORDER BY visitor_id DESC limit 1";
         $result = $conn->query($sql);
         
             if ($result->num_rows > 0) {
@@ -57,7 +57,7 @@
         <link rel="stylesheet" href="csssheet.css">
     </head>
 <body>
-    <h1>Alla tidigare besökare, sorterat nyaste överst<h1>
+    <h1>Alla tidigare besökare, sorterat äldst överst<h1>
         <div>
             <?php
                 echo $name_tag;
