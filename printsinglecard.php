@@ -24,21 +24,21 @@
 
              // starting building a long string that is concatignated by using .= 
              // then echo out that string in html code below
-             $name_tag .= '<br>';
-             $name_tag .= '<div id="Carddiv">';
-             $name_tag .= '<div id="Textdiv">';
+              $name_tag .= '<br>';
+             $name_tag .= '<div class="visitorCard">';
+             $name_tag .= '<div class="Textdiv">';
              $name_tag .= '<p>'. $row["first_name"] .'</p>';
              $name_tag .= '<p>'. $row["last_name"] .'</p>';
-             $name_tag .= '<p><b>'. $row["course_name"] .'</b></p>'; 
-             $name_tag .= '<p>'. $row["start_date"] .'</p>';
-             $name_tag .= '<p>'. $row["end_date"] .'</p>';
+             $name_tag .= '<p><b>'. $row["course_name"] .'</b>'; 
+             $name_tag .= '<p>___________________</p>'; 
+             $name_tag .= '<p>'. $row["start_date"] .'  -  '. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
-             $name_tag .= '<div id="Picturediv">';
-             $name_tag .= '<div id="Picturedivholder">';
-             $name_tag .= '<img id="Visitor_picture" src="'. $row["visitor_picture"] . '"/>';
+             $name_tag .= '<div class="Picturediv">';
+             $name_tag .= '<div class="Picturedivholder">';
+             $name_tag .= '<img class="Visitor_picture" src="'. $row["visitor_picture"] . '"/>';
              $name_tag .= '</div ">';
              $name_tag .= '</div>';
-             $name_tag .= '<div id="Bottomdiv">';
+             $name_tag .= '<div class="Bottomdiv">';
              $name_tag .= '<h2>BESÖKARE</h2>';
              $name_tag .= '</div>';
              $name_tag .= '</div>';
@@ -60,7 +60,7 @@
     </head>
 <body>
     <h1>Senast registrerade besökare<h1>
-        <div>
+        <div id="visitorContainer">
             <?php
                 echo $name_tag;
                 echo $picture_tag;
