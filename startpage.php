@@ -11,12 +11,12 @@
 </head>
 <body>
 <form action="DBconnection.php" method="post" target="_self" enctype="multiform/form-data">
-	First Name: <input type="text" name="first_name"><br>
-	Last Name: <input type="text" name="last_name"><br>
-	Course: <input type="text" name="course_name"><br>
-	Start Date: <input type="date" name="start_date" placeholder="yyyy-mm-dd"><br>
-	End Date: <input type="date" name="end_date" placeholder="yyyy-mm-dd"><br>
-	Company Logo: <input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" >
+	<input type="text" name="first_name">- First Name<br>
+	 <input type="text" name="last_name">- Last Name:<br>
+	<input type="text" name="course_name">- Course: <br>
+	<input type="date" name="start_date" placeholder="yyyy-mm-dd">- Start Date: <br>
+	<input type="date" name="end_date" placeholder="yyyy-mm-dd">- End Date: <br>
+<input id="companyText" type="text" name="visitor_picture" placeholder="vänligen välj loga nedanför" >- Company Logo: 
 	<div style="width:150px;height:150px">
 	<image id="logotype" src="visitor_pictures/Angry_Marine.jpg" style="max-width:100%;max-height:100%"></image>
 	</div>
@@ -36,11 +36,11 @@
   </div>
 </div>
 
-<input type="button" name="print" value="print nametags" onclick="">
+<input type="button" name="print" value="print nametags" onclick="printsinglecard.php">
 
 
-<form action="printnametag.php">
-    <input type="submit" name="print" value="Print nametags" />
+<form action="printallcard.php">
+    <input type="submit" name="print" value="Show all visitors" />
 </form>
 <script>
 	$('#ddmID li').on('click', function(){
@@ -50,3 +50,5 @@
 </script>
 </body>
 </html>
+
+

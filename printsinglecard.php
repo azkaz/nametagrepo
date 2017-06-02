@@ -57,7 +57,7 @@
         <link rel="stylesheet" href="csssheet.css">
     </head>
 <body>
-    <h1>Alla tidigare besökare, sorterat äldst överst<h1>
+    <h1>Senast registrerade besökare<h1>
         <div>
             <?php
                 echo $name_tag;
