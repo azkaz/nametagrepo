@@ -29,7 +29,7 @@
 	VALUES (default,'$first_name','$last_name','$course_name','$start_date','$end_date','visitor_pictures/$visitor_picture.jpg')";
 
 	if($conn->query($sql)===TRUE){
-		header("LOCATION: http://localhost/test.php");
+		header("LOCATION: http://localhost/startpage.php");
 
 	}else {
 		echo "Error: " . $sql . $conn->error; 
