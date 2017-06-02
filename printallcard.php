@@ -25,13 +25,13 @@
              // starting building a long string that is concatignated by using .= 
              // then echo out that string in html code below
              $name_tag .= '<br>';
-             $name_tag .= '<div id="Carddiv">';
+             $name_tag .= '<div id="Carddiv" class="visitorCard">';
              $name_tag .= '<div id="Textdiv">';
              $name_tag .= '<p>'. $row["first_name"] .'</p>';
              $name_tag .= '<p>'. $row["last_name"] .'</p>';
-             $name_tag .= '<p><b>'. $row["course_name"] .'</b></p>'; 
-             $name_tag .= '<p>'. $row["start_date"] .'</p>';
-             $name_tag .= '<p>'. $row["end_date"] .'</p>';
+             $name_tag .= '<p><b>'. $row["course_name"] .'</b>'; 
+             $name_tag .= '<p>___________________</p>'; 
+             $name_tag .= '<p>'. $row["start_date"] .'  -  '. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
              $name_tag .= '<div id="Picturediv">';
              $name_tag .= '<div id="Picturedivholder">';
@@ -60,7 +60,7 @@
     </head>
 <body>
     <h1>Alla tidigare besökare, sorterat nyaste överst<h1>
-        <div>
+        <div id="visitorContainer">
             <?php
                 echo $name_tag;
                 echo $picture_tag;

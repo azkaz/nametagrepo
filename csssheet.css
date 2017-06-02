@@ -2,7 +2,7 @@ p {
     color: #FFFDFA;
     font-size: 12px;
     text-transform: uppercase;
-    line-height: 0.5;
+    line-height: 0.8;
     font-family: Arial;
     text-align: left;
     text-indent: 15px;
@@ -43,4 +43,11 @@ h2 {
 #Visitor_picture {
     max-height: 100%;
     max-width: 100%;
+}
+.visitorCard{
+}
+#visitorContainer{
+    min-width: 1800px;
+    max-width: 1800px;
+    background-color: cyan;
 }

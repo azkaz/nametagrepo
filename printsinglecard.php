@@ -34,7 +34,9 @@
              $name_tag .= '<p>'. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
              $name_tag .= '<div id="Picturediv">';
-             $name_tag .= '<img id="Visitor_picture" src="http://www.itmassa.se/wp-content/uploads/2016/09/Lexicon_IT-Konsult_RGB-BIGWhiteB.jpg"/>';
+             $name_tag .= '<div id="Picturedivholder">';
+             $name_tag .= '<img id="Visitor_picture" src="'. $row["visitor_picture"] . '"/>';
+             $name_tag .= '</div ">';
              $name_tag .= '</div>';
              $name_tag .= '<div id="Bottomdiv">';
              $name_tag .= '<h2>BESÖKARE</h2>';

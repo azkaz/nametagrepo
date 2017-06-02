@@ -31,18 +31,21 @@
       <li><a href="#">Angry_Marine</a></li>
       <li><a href="#">Waagh</a></li>
       <li><a href="#">wereBusy</a></li>
-      <li><a href="#">Tau</a></li>
 			<li><a href="#">GodEmperor</a></li>
     </ul>
   </div>
 </div>
 
-<input type="button" name="print" value="print nametags" onclick="printsinglecard.php">
 
 
 <form action="printallcard.php">
     <input type="submit" name="print" value="Show all visitors" />
 </form>
+
+<form action="printsinglecard.php">
+	<input type="submit" name="printsingle" value="print latest card">
+</form>
+
 <script>
 	$('#ddmID li').on('click', function(){
 		$('#companyText').val($(this).text());
