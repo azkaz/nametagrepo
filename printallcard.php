@@ -1,8 +1,8 @@
 <?php 
 	$servername = "localhost"; 
 	$username = "root"; 
-	$password = "mario64"; 
-	$dbname="visitorDB";
+	$password = ""; 
+	$dbname="visitordb";
 	//echo "Code is Running";
 	
 	$conn = new mysqli($servername, $username, $password, $dbname); 
@@ -31,7 +31,7 @@
              $name_tag .= '<p>'. $row["last_name"] .'</p>';
              $name_tag .= '<p><b>'. $row["course_name"] .'</b>'; 
              $name_tag .= '<p>___________________</p>'; 
-             $name_tag .= '<p>'. $row["start_date"] .'  -  '. $row["end_date"] .'</p>';
+             $name_tag .= '<p>'. $row["start_date"] .'    -    '. $row["end_date"] .'</p>';
              $name_tag .= '</div>';
              $name_tag .= '<div class="Picturediv">';
              $name_tag .= '<div class="Picturedivholder">';

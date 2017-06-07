@@ -1,5 +1,5 @@
 p {
-    color: #FFFDFA;
+    color: #ED1B24;
     font-size: 12px;
     text-transform: uppercase;
     line-height: 0.8;
@@ -8,7 +8,7 @@ p {
     text-indent: 15px;
 }
 h2 { 
-    color: #FFFDFA;
+    color: #ED1B24;
     font-family: Arial;
     text-align: center;
 }
@@ -40,14 +40,13 @@ h2 {
     position: relative;
     width: 350px;
     height: 200px;
-    background-color: #ED1B24;  
+    background-color: white;  
     border-style: dashed;
     border-width: 2px; 
-    border-color: white;
+    border-color: #ED1B24;
     margin: 5px 5px 5px 5px;
 }
 #visitorContainer{
     min-width: 750px;
     max-width: 750px;
-    background-color: cyan;
 }

@@ -2,8 +2,8 @@
 <?php 
 	$servername = "localhost"; 
 	$username = "root"; 
-	$password = "mario64"; 
-	$dbname="visitorDB";
+	$password = ""; 
+	$dbname="visitordb";
 	echo "Code is Running";
 	
 	$conn = new mysqli($servername, $username, $password, $dbname); 
