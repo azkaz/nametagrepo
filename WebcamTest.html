@@ -2,6 +2,7 @@
 <video id="player" controls autoplay></video>
 <button id="capture">Capture</button>
 <canvas id="snapshot" width=320 height=240></canvas>
+<a id="dl" download="Canvas.jpg" href="#">Download Canvas</a>
 <script>
   var player = document.getElementById('player'); 
   var snapshotCanvas = document.getElementById('snapshot');
@@ -21,4 +22,23 @@
 
   navigator.mediaDevices.getUserMedia({video: true})
       .then(handleSuccess);
+
+    //  var canvas = document.getElementById("snapshot"); 
+    //  var canvas = document.getElementById("snapshot");
+
+/* REGISTER DOWNLOAD HANDLER */
+/* Only convert the canvas to Data URL when the user clicks. 
+   This saves RAM and CPU ressources in case this feature is not required. */
+function dlCanvas() {
+  var dt = snapshotCanvas.toDataURL('image/jpg');
+  /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
+  dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+
+  /* In addition to <da>'s "download" attribute, you can define HTTP-style headers */
+  dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.jpg');
+
+  this.href = dt;
+};
+
+  document.getElementById("dl").addEventListener('click', dlCanvas, false);
 </script>

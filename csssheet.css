@@ -50,6 +50,19 @@ h2 {
     min-width: 750px;
     max-width: 750px;
 }
+#videoMask{
+       width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+#videoMask canvas {
+    margin: -200px 0 0 -100px;
+}
+
+
+
+
+
 @media print{
     .noprint{
         display: none;
