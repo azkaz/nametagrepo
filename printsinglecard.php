@@ -59,7 +59,7 @@
         <link rel="stylesheet" href="csssheet.css">
     </head>
 <body>
-    <h1>Senast registrerade besökare<h1>
+    <h1 class="noprint">Senast registrerade besökare<h1>
         <div id="visitorContainer">
             <?php
                 echo $name_tag;

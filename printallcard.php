@@ -59,7 +59,7 @@
         <link rel="stylesheet" href="csssheet.css">
     </head>
 <body>
-    <h1>Alla tidigare besökare, sorterat nyaste överst<h1>
+    <h1 class="noprint">Alla tidigare besökare, sorterat nyaste överst<h1>
         <div id="visitorContainer">
             <?php
                 echo $name_tag;
