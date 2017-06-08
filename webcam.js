@@ -1,7 +1,6 @@
 function loadWebcam() {
     document.getElementById("dl").addEventListener('click', dlCanvas, false);
 
-
 var player = document.getElementById('player');
 var snapshotCanvas = document.getElementById('snapshot');
 var captureButton = document.getElementById('capture');
@@ -29,6 +28,9 @@ navigator.mediaDevices.getUserMedia({ video: true })
 /* Only convert the canvas to Data URL when the user clicks. 
    This saves RAM and CPU ressources in case this feature is not required. */
 function dlCanvas() {
+    
+    addPhotoName();
+    //	console.log(json);
     var dt = snapshotCanvas.toDataURL('image/jpg');
     /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
     dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');

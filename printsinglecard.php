@@ -66,5 +66,6 @@
                 echo $picture_tag;
             ?>
         </div>
+    
 </body>
 </html>

@@ -39,7 +39,45 @@
 </form>
 
 <script>
-	$("#companyText").hide();
+
+	
+var json = getJson();
+function getJson(){
+		var json = null;
+	$.ajax({
+		'async': false,
+		'global': false,
+		'url': 'general.json',
+		'dataType': "json",
+		'success': function (data) {
+			json = data;
+		}
+	});
+	return json;
+}
+
+	function addPhotoName(){
+			
+			var obj={photoIncrement:++json.photoIncrement};
+			console.log(obj);
+		$.ajax
+    ({
+        type: "GET",
+        dataType : 'json',
+        async: false,
+        url: 'createJson.php',
+        data: { data: JSON.stringify(obj) },
+     // success: function() {console.log("Thanks!"); },
+     // failure: function() {console.log("Error!");}
+    });
+
+		if(json.photoIncrement === 0){
+			$("#companyText").val("picture");
+		}
+		else{
+			$("#companyText").val("picture ("+json.photoIncrement+")");
+		}
+	}
 </script>
 </body>
 </html>
