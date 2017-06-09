@@ -15,17 +15,17 @@
 	<video id="player" controls autoplay></video>
 	</div>
 <button id="capture">Capture</button>
-<!--  -->
+<!-- gets the reference set in dlCanvas function in webcam.js and downloads the created jpg image there -->
+<!-- <a id="dl" download=""+testName+".jpg" href="#">Download Canvas</a> -->
 <a id="dlbtn" class="btn btn-success">Download Canvas</a>
 <!-- gets the data from the input fields and sends it to DBconnection for insertion into database --> 
 <form action="DBconnection.php" method="post" target="_self" enctype="multiform/form-data">
 	<input type="text" name="first_name">- First Name<br>
-	<input type="text" name="last_name">- Last Name:<br>
+	 <input type="text" name="last_name">- Last Name:<br>
 	<input type="text" name="course_name">- Course: <br>
 	<input type="date" name="start_date" placeholder="yyyy-mm-dd">- Start Date: <br>
-	<input type="date" name="end_date" placeholder="yyyy-mm-dd">- End Date: <br>
-	<input id="companyText" type="text" name="visitor_picture" > 
-	<input id="logotype" type="text" name="logotype"> - Logotype
+		<input type="date" name="end_date" placeholder="yyyy-mm-dd">- End Date: <br>
+<input id="companyText" type="text" name="visitor_picture" > 
 	<!-- creates a canvas that gets a fills from a snapshot picture taken from the videostream.
 	this can then be downloaded as a jpg file and used as a potraitpicture of the visitor on the visitor nametag  -->
 	<div style="min-width:220px;max-height:277px">
@@ -34,20 +34,6 @@
 	<input type="submit" name="Submit">
 </form>
 	
-	<div class="container">
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Logo
-    <span class="caret"></span></button>
-    <ul id="ddmID" class="dropdown-menu">
-      <li><a href="#">Angry_Marine</a></li>
-      <li><a href="#">We're Filthy Rich</a></li>
-      <li><a href="#">wereBusy</a></li>
-	  <li><a href="#">GodEmperor</a></li>
-	  <li><a href="#">Tau</a></li>
-	  <li><a href="#">Photo</a></li>
-    </ul>
-  </div>
-</div>
 <!-- wondering if this is the best solution to changing URL but it works so far -->
 <form action="printallcard.php">
     <input type="submit" name="print" value="Show all visitors" />
@@ -58,10 +44,53 @@
 </form>
 
 <script>
-	$("#companyText").hide();
-		$('#ddmID li').on('click', function(){
-			$("#logotype").val($(this).text());
-		});
+	// hides the window where downloaded photo name is sent by form data to be inserted into the database 
+$("#companyText").hide();
+	var testName ="hello";
+/*
+* Now this is a bit of overly complicated and strange solution to the problem of saving the file using html. 
+*	Since if use <a> tag and lets that download a file. 
+*
+*/
+
+
+var json = getJson();
+function getJson(){
+		var json = null;
+	$.ajax({
+		'async': false,
+		'global': false,
+		'url': 'general.json',
+		'dataType': "json",
+		'success': function (data) {
+			json = data;
+		}
+	});
+	return json;
+}
+
+	function addPhotoName(){
+			// by placing the ++ before the variable it gets incremented before it is set to the object before the = sign 
+			var obj={photoIncrement:++json.photoIncrement};
+			console.log(obj);
+		$.ajax
+    ({
+        type: "GET",
+        dataType : 'json',
+        async: false,
+        url: 'createJson.php',
+        data: { data: JSON.stringify(obj) },
+     // success: function() {console.log("Thanks!"); },
+     // failure: function() {console.log("Error!");}
+    });
+
+		if(json.photoIncrement === 0){
+			$("#companyText").val("picture");
+		}
+		else{
+			$("#companyText").val("picture ("+json.photoIncrement+")");
+		}
+	}
 </script>
 </body>
 </html>

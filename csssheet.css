@@ -7,7 +7,7 @@ p {
     text-align: left;
     text-indent: 15px;
 }
-h2 { 
+h3 { 
     color: #ED1B24;
     font-family: Arial;
     text-align: center;
@@ -58,9 +58,15 @@ h2 {
 #videoMask canvas {
     margin: -200px 0 0 -100px;
 }
-
-
-
+.logoImage{
+    max-height: 100%; 
+    max-width: 100%; 
+}
+.logoContainer{
+    width:200px;
+    height: 35px;
+    background-color: cyan;
+}
 
 
 @media print{
