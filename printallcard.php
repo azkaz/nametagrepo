@@ -30,7 +30,6 @@
              $name_tag .= '<p>'. $row["first_name"] .'</p>';
              $name_tag .= '<p>'. $row["last_name"] .'</p>';
              $name_tag .= '<p><b>'. $row["course_name"] .'</b>'; 
-             $name_tag .= '<p>___________________</p>'; 
              $name_tag .= '<p>'. $row["start_date"] .'    -    '. $row["end_date"] .'</p>';
              $name_tag .= '<div class="logoContainer">';
              $name_tag .= '<img class="logoImage" src="'. $row["logotype"] . '"/>';

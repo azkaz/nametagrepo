@@ -12,7 +12,7 @@
 </head>
 <body onload="loadWebcam()">
 	<div id="videoMask">
-	<video id="player" controls autoplay></video>
+	<video id="player"  width="400" height="320" class="videoStream"  controls autoplay></video>
 	</div>
 <button id="capture">Capture</button>
 <!--  -->
@@ -28,8 +28,8 @@
 	<input id="logotype" type="text" name="logotype"> - Logotype
 	<!-- creates a canvas that gets a fills from a snapshot picture taken from the videostream.
 	this can then be downloaded as a jpg file and used as a potraitpicture of the visitor on the visitor nametag  -->
-	<div style="min-width:220px;max-height:277px">
-		<canvas id="snapshot" width="220px"height="277px"></canvas>
+	<div style="min-width:150px;max-height:182px">
+		<canvas id="snapshot" width="150px"height="182px"></canvas>
 	</div>
 	<input type="submit" name="Submit">
 </form>

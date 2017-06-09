@@ -2,7 +2,7 @@ p {
     color: #ED1B24;
     font-size: 12px;
     text-transform: uppercase;
-    line-height: 0.8;
+    line-height: 0.6;
     font-family: Arial;
     text-align: left;
     text-indent: 15px;
@@ -14,7 +14,7 @@ h3 {
 }
 .Textdiv {
     float:right;
-    height: 75%;
+    height: 80%;
     width: 65%;  
 }
 .Picturediv {
@@ -26,7 +26,7 @@ h3 {
     height: 25%;
 }
 .Picturedivholder{
-    margin: 10px 0px 0px 5px;
+    margin: 3px 0px 0px 3px;
     width: 100%;
     height: 100%;   
 }
@@ -34,6 +34,8 @@ h3 {
 .Visitor_picture {
     max-height: 100%;
     max-width: 100%;
+    border:magenta 2px; 
+    border-style: solid;
 }
 .visitorCard{
     float:left;
@@ -61,11 +63,20 @@ h3 {
 .logoImage{
     max-height: 100%; 
     max-width: 100%; 
+    margin-left: auto;
+    margin-right: auto; 
+    display: block;
 }
 .logoContainer{
     width:200px;
-    height: 35px;
+    height: 65px;
     background-color: cyan;
+    margin-left: auto; 
+    margin-right: auto;
+}
+#player{
+   -webkit-clip-path: inset(13% 26% 10% 28%);
+    clip-path: inset(13% 26% 10% 28%);
 }
 
 
