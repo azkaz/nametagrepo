@@ -34,7 +34,7 @@ h3 {
 .Visitor_picture {
     max-height: 100%;
     max-width: 100%;
-    border:black 2px; 
+    border:magenta 2px; 
     border-style: solid;
 }
 .visitorCard{
@@ -75,6 +75,7 @@ h3 {
 .logoContainer{
     width:200px;
     height: 65px;
+    background-color: cyan;
     margin-left: auto; 
     margin-right: auto;
 }
@@ -105,7 +106,7 @@ clip-path: inset(15% 30% 25% 30%);
     float:left;
     padding-right: 25px;
 }
-/* makes sure that elements is hidden when printer window is open */
+
 @media print{
     .noprint{
         display: none;

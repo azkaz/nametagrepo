@@ -44,7 +44,6 @@
              $name_tag .= '<h3>BESÖKARE</h3>';
              $name_tag .= '</div>';
              $name_tag .= '</div>';
-             //$picture_tag .= '<img src="data:image/jpeg;base64,'.base64_encode( $row['Lexicon'] ).'"/>';
          }
 
     } 
