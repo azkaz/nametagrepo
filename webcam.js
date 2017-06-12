@@ -35,10 +35,10 @@ function loadWebcam() {
         /* In addition to <da>'s "download" attribute, you can define HTTP-style headers */
         dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Caaaaaanvas.jpg');
 
-        //this.href = dt;
         return dt;
     };
-
+    // when clicking on download picture 
+    // sets the name of the downloaded file to todays date and then downloads it  
     $("#dlbtn").click(function () {
         var currentdate = new Date();
         var datetime = currentdate.getDate() + "-"
