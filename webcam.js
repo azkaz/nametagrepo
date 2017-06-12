@@ -14,7 +14,7 @@ function loadWebcam() {
         // Draw the video frame to the canvas.
         // context.drawImage(player, 0, 0, snapshotCanvas.width,
         //   snapshotCanvas.height);
-        context.drawImage(player, 200, 100, 220, 277, 0, 0, 220, 277, );
+        context.drawImage(player, 192, 72, 259, 294, 0, 0, 150, 182 );
     });
 
     navigator.mediaDevices.getUserMedia({ video: true })
